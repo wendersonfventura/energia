@@ -1,89 +1,71 @@
+/* Geral */
 body {
-  background: #111;
-  color: white;
-  font-family: sans-serif;
-  text-align: center;
-  margin-top: 100px;
-}
-
-.chat-container {
-  width: 100%;
-  max-width: 1000px;  /* Aumentei a largura para aproveitar melhor a tela */
-  margin: auto;
-}
-
-input {
-  width: 80%;
-  padding: 10px;
-  border-radius: 8px;
-  margin-top: 20px;
-  border: none;
-}
-
-button {
-  padding: 10px 20px;
-  margin-left: 10px;
-  border-radius: 8px;
-  border: none;
-  background-color: #555;
-  color: white;
-  cursor: pointer;
-}
-
-#resposta {
-  margin-top: 20px;
-  font-size: 1.2em;
+  background: #f4f7fb;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
-  max-width: 1000px; /* Aumentei a largura para aproveitar melhor a tela */
-  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  border: 1px solid #ddd;
+  height: 80vh;
+  overflow: hidden;
 }
 
+/* Cabeçalho */
 .header {
-  background-color: #f0f0f0;
-  padding: 10px 15px;
+  background-color: #3faffa;
+  color: #fff;
+  padding: 15px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ccc;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .header img {
-  width: 50px;  /* Aumentei o tamanho do avatar */
+  width: 50px;
   height: 50px;
   border-radius: 50%;
   margin-right: 10px;
 }
 
 .header .name {
-  font-size: 20px;  /* Aumentei o tamanho da fonte */
+  font-size: 22px;
   font-weight: bold;
-  color: #000;
-  display: flex;
-  align-items: center;
 }
 
-.header .name .verified {
-  color: #1991f7;
-  font-size: 16px;
+.header .verified {
+  color: #ffcc00;
+  font-size: 18px;
   margin-left: 5px;
 }
 
+/* Chat */
 .chat {
-  flex: 1;
-  padding: 30px;  /* Aumentei o padding para dar mais espaço */
+  flex-grow: 1;
+  padding: 20px;
+  background: #f9f9f9;
   overflow-y: auto;
-  background-color: #f9f9f9;
-  min-height: 70vh;  /* Para garantir que o chat ocupe mais espaço */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .msg {
+  margin-bottom: 15px;
   display: flex;
-  margin-bottom: 10px;
 }
 
 .user {
@@ -95,50 +77,61 @@ button {
 }
 
 .bubble {
-  max-width: 75%;
-  padding: 10px 15px;
-  border-radius: 8px;
-  font-size: 16px;  /* Aumentei o tamanho da fonte */
-  line-height: 1.4;
+  max-width: 80%;
+  padding: 12px;
+  border-radius: 20px;
+  font-size: 16px;
+  line-height: 1.5;
   white-space: pre-line;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .user .bubble {
   background-color: #dcf8c6;
   color: #000;
-  border-top-right-radius: 0;
 }
 
 .bot .bubble {
   background-color: #ebebeb;
   color: #000;
-  border-top-left-radius: 0;
 }
 
+/* Formulário */
 #form {
   display: flex;
-  padding: 20px;  /* Aumentei o padding do formulário */
-  background-color: #eee;
-  border-top: 1px solid #ccc;
+  padding: 15px;
+  background-color: #fafafa;
+  border-top: 1px solid #ddd;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 #message {
-  flex: 1;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 18px;  /* Aumentei a fonte da mensagem */
+  flex-grow: 1;
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  font-size: 16px;
   background-color: #fff;
-  color: #000;
+  transition: all 0.3s ease;
+}
+
+#message:focus {
+  border-color: #3faffa;
 }
 
 button {
-  margin-left: 10px;
-  padding: 10px 15px;
-  background-color: #25d366;
+  margin-left: 15px;
+  padding: 12px 20px;
+  background-color: #3faffa;
   color: white;
   font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1f79f7;
 }
