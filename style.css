@@ -8,7 +8,7 @@ body {
 
 .chat-container {
   width: 100%;
-  max-width: 400px;
+  max-width: 1000px;  /* Aumentei a largura para aproveitar melhor a tela */
   margin: auto;
 }
 
@@ -33,4 +33,112 @@ button {
 #resposta {
   margin-top: 20px;
   font-size: 1.2em;
+}
+
+.container {
+  max-width: 1000px; /* Aumentei a largura para aproveitar melhor a tela */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  border: 1px solid #ddd;
+}
+
+.header {
+  background-color: #f0f0f0;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.header img {
+  width: 50px;  /* Aumentei o tamanho do avatar */
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.header .name {
+  font-size: 20px;  /* Aumentei o tamanho da fonte */
+  font-weight: bold;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.header .name .verified {
+  color: #1991f7;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.chat {
+  flex: 1;
+  padding: 30px;  /* Aumentei o padding para dar mais espaço */
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  min-height: 70vh;  /* Para garantir que o chat ocupe mais espaço */
+}
+
+.msg {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.user {
+  justify-content: flex-end;
+}
+
+.bot {
+  justify-content: flex-start;
+}
+
+.bubble {
+  max-width: 75%;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 16px;  /* Aumentei o tamanho da fonte */
+  line-height: 1.4;
+  white-space: pre-line;
+}
+
+.user .bubble {
+  background-color: #dcf8c6;
+  color: #000;
+  border-top-right-radius: 0;
+}
+
+.bot .bubble {
+  background-color: #ebebeb;
+  color: #000;
+  border-top-left-radius: 0;
+}
+
+#form {
+  display: flex;
+  padding: 20px;  /* Aumentei o padding do formulário */
+  background-color: #eee;
+  border-top: 1px solid #ccc;
+}
+
+#message {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 18px;  /* Aumentei a fonte da mensagem */
+  background-color: #fff;
+  color: #000;
+}
+
+button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  background-color: #25d366;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
